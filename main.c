@@ -1,10 +1,11 @@
 #include <stdio.h>
-#include "type.h"
+#include <stdint.h>
+#include <stdbool.h>
 #include "arry_list.h"
 
 int main(void)
 {
-    uint32 i = 0, num = 0, max = 60000;
+    uint32_t i = 0, num = 0, max = 50;
     al_date_t xm = {0, "XiaoMing"};
     al_date_t xm_t;
     al_table_init();
@@ -37,7 +38,7 @@ int main(void)
     }
     #endif
     printf("--------------------------------------------------\n\n");
-    getchar();
-    getchar();
+    // getchar();
+    // getchar();
     return 0;
 }

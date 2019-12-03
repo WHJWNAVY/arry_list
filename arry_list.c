@@ -11,7 +11,7 @@
  * Data Declaration
  */
 al_date_t   gv_alTable[AL_TABLE_MAX];   /* Arry list table*/
-uint32      gv_alCurNum = 0;            /* Current arry list num */
+uint32_t      gv_alCurNum = 0;            /* Current arry list num */
 
 /*
  * Macro Definition
@@ -37,7 +37,7 @@ uint32      gv_alCurNum = 0;            /* Current arry list num */
  * Command Common Functions
  *
  ******************************************************************************/
-static int32 _al_table_add_idx(uint32 idx, al_date_t *tbl)
+static int32_t _al_table_add_idx(uint32_t idx, al_date_t *tbl)
 {
     if((idx < 0) || (idx > AL_TABLE_MAX))
         return AL_ERR_DATE_RANGE;
@@ -51,9 +51,9 @@ static int32 _al_table_add_idx(uint32 idx, al_date_t *tbl)
     return AL_ERR_OK;
 }
 
-static int32 _al_table_del_idx(uint32 idx)
+static int32_t _al_table_del_idx(uint32_t idx)
 {
-    uint32 i = 0;
+    uint32_t i = 0;
     if((idx < 0) || (idx >= gv_alCurNum))
         return AL_ERR_DATE_RANGE;
     if(gv_alCurNum == 0) // Table is empty, nothing to delete.
@@ -72,9 +72,9 @@ static int32 _al_table_del_idx(uint32 idx)
     return AL_ERR_OK;
 }
 
-static int32 _al_table_find(al_date_t *tbl, uint32 *idx)
+static int32_t _al_table_find(al_date_t *tbl, uint32_t *idx)
 {
-    uint32 i = 0;
+    uint32_t i = 0;
     al_date_t cmp_t;
     AL_TABLE_CLR(cmp_t);
     if((tbl == NULL) || (idx == NULL))
@@ -103,9 +103,9 @@ static int32 _al_table_find(al_date_t *tbl, uint32 *idx)
  返 回 值  : 
 
 *****************************************************************************/
-int32 al_table_init(void)
+int32_t al_table_init(void)
 {
-    uint32 i = 0;
+    uint32_t i = 0;
     for(i=0; i<AL_TABLE_MAX; i++)
     {
         AL_TABLE_CLR(gv_alTable[i]);
@@ -121,7 +121,7 @@ int32 al_table_init(void)
  返 回 值  : 
 
 *****************************************************************************/
-int32 al_table_add(al_date_t *tbl)
+int32_t al_table_add(al_date_t *tbl)
 {
     al_date_t cmp_t;
     AL_TABLE_CLR(cmp_t);
@@ -145,9 +145,9 @@ int32 al_table_add(al_date_t *tbl)
  返 回 值  : 
 
 *****************************************************************************/
-int32 al_table_del(al_date_t *tbl)
+int32_t al_table_del(al_date_t *tbl)
 {
-    uint32 idx = 0;
+    uint32_t idx = 0;
     al_date_t cmp_t;
     AL_TABLE_CLR(cmp_t);
 
@@ -171,9 +171,9 @@ int32 al_table_del(al_date_t *tbl)
  返 回 值  : 
 
 *****************************************************************************/
-int32 al_table_modify(al_date_t *fr_tbl, al_date_t *to_tbl)
+int32_t al_table_modify(al_date_t *fr_tbl, al_date_t *to_tbl)
 {
-    uint32 idx = 0;
+    uint32_t idx = 0;
     al_date_t cmp_t;
     AL_TABLE_CLR(cmp_t);
 
@@ -200,14 +200,14 @@ int32 al_table_modify(al_date_t *fr_tbl, al_date_t *to_tbl)
 /*****************************************************************************
  函 数 名  : al_table_get_byidx
  功能描述  : 通过索引取得表中的元素
- 输入参数  : uint32 idx      :元素索引
+ 输入参数  : uint32_t idx      :元素索引
  输出参数  : al_date_t *tbl  :取得的元素值
  返 回 值  : 
 
 *****************************************************************************/
-int32 al_table_get_byidx(uint32 idx, al_date_t *tbl)
+int32_t al_table_get_byidx(uint32_t idx, al_date_t *tbl)
 {
-    uint32 idx_t = idx;
+    uint32_t idx_t = idx;
     #if 1
     if((idx < 0) || (idx >= gv_alCurNum))
         return AL_ERR_DATE_RANGE;
@@ -227,11 +227,11 @@ int32 al_table_get_byidx(uint32 idx, al_date_t *tbl)
  函 数 名  : al_table_get_num
  功能描述  : 获取表中元素个数
  输入参数  : 无
- 输出参数  : uint32 *num  :表中的元素个数
+ 输出参数  : uint32_t *num  :表中的元素个数
  返 回 值  : 
 
 *****************************************************************************/
-int32 al_table_get_num(uint32 *num)
+int32_t al_table_get_num(uint32_t *num)
 {
     if(num == NULL)
         return AL_ERR_POINT_NULL;
