@@ -5,9 +5,9 @@
 
 int main(void)
 {
-    uint32_t i = 0, num = 0, max = 50;
-    al_date_t xm = {0, "XiaoMing"};
-    al_date_t xm_t;
+    uint32_t i = 0, num = 0, max = AL_TABLE_MAX;
+    al_data_t xm = {0, "XiaoMing"};
+    al_data_t xm_t;
     al_table_init();
     for(i=0; i<max; i++)
     {

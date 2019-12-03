@@ -10,14 +10,14 @@
 /*
  * Data Declaration
  */
-al_date_t   gv_alTable[AL_TABLE_MAX];   /* Arry list table*/
+al_data_t   gv_alTable[AL_TABLE_MAX];   /* Arry list table*/
 uint32_t      gv_alCurNum = 0;            /* Current arry list num */
 
 /*
  * Macro Definition
  */
 #define AL_DATE_SIZE                                    \
-    (sizeof(al_date_t))
+    (sizeof(al_data_t))
 #define AL_TABLE_SET(var)                               \
     do{memset(&(var),0xFF,AL_DATE_SIZE);}while(0)
 #define AL_TABLE_CLR(var)                               \
@@ -37,7 +37,7 @@ uint32_t      gv_alCurNum = 0;            /* Current arry list num */
  * Command Common Functions
  *
  ******************************************************************************/
-static int32_t _al_table_add_idx(uint32_t idx, al_date_t *tbl)
+static int32_t _al_table_add_idx(uint32_t idx, al_data_t *tbl)
 {
     if((idx < 0) || (idx > AL_TABLE_MAX))
         return AL_ERR_DATE_RANGE;
@@ -72,10 +72,10 @@ static int32_t _al_table_del_idx(uint32_t idx)
     return AL_ERR_OK;
 }
 
-static int32_t _al_table_find(al_date_t *tbl, uint32_t *idx)
+static int32_t _al_table_find(al_data_t *tbl, uint32_t *idx)
 {
     uint32_t i = 0;
-    al_date_t cmp_t;
+    al_data_t cmp_t;
     AL_TABLE_CLR(cmp_t);
     if((tbl == NULL) || (idx == NULL))
         return AL_ERR_POINT_NULL;
@@ -116,14 +116,14 @@ int32_t al_table_init(void)
 /*****************************************************************************
  函 数 名  : al_table_add
  功能描述  : 往表中增加一个元素
- 输入参数  : al_date_t *tbl  :需要增加的元素
+ 输入参数  : al_data_t *tbl  :需要增加的元素
  输出参数  : 无
  返 回 值  : 
 
 *****************************************************************************/
-int32_t al_table_add(al_date_t *tbl)
+int32_t al_table_add(al_data_t *tbl)
 {
-    al_date_t cmp_t;
+    al_data_t cmp_t;
     AL_TABLE_CLR(cmp_t);
 
     if(tbl == NULL)
@@ -140,15 +140,15 @@ int32_t al_table_add(al_date_t *tbl)
 /*****************************************************************************
  函 数 名  : al_table_del
  功能描述  : 删除表中指定的元素
- 输入参数  : al_date_t *tbl  :需要删除的元素
+ 输入参数  : al_data_t *tbl  :需要删除的元素
  输出参数  : 无
  返 回 值  : 
 
 *****************************************************************************/
-int32_t al_table_del(al_date_t *tbl)
+int32_t al_table_del(al_data_t *tbl)
 {
     uint32_t idx = 0;
-    al_date_t cmp_t;
+    al_data_t cmp_t;
     AL_TABLE_CLR(cmp_t);
 
     if(tbl == NULL)
@@ -165,16 +165,16 @@ int32_t al_table_del(al_date_t *tbl)
 /*****************************************************************************
  函 数 名  : al_table_modify
  功能描述  : 修改表中指定的元素
- 输入参数  : al_date_t *fr_tbl  :需要被修改的元素
-             al_date_t *to_tbl  :修改后的元素的值
+ 输入参数  : al_data_t *fr_tbl  :需要被修改的元素
+             al_data_t *to_tbl  :修改后的元素的值
  输出参数  : 无
  返 回 值  : 
 
 *****************************************************************************/
-int32_t al_table_modify(al_date_t *fr_tbl, al_date_t *to_tbl)
+int32_t al_table_modify(al_data_t *fr_tbl, al_data_t *to_tbl)
 {
     uint32_t idx = 0;
-    al_date_t cmp_t;
+    al_data_t cmp_t;
     AL_TABLE_CLR(cmp_t);
 
     if((fr_tbl == NULL) || (to_tbl == NULL))
@@ -201,11 +201,11 @@ int32_t al_table_modify(al_date_t *fr_tbl, al_date_t *to_tbl)
  函 数 名  : al_table_get_byidx
  功能描述  : 通过索引取得表中的元素
  输入参数  : uint32_t idx      :元素索引
- 输出参数  : al_date_t *tbl  :取得的元素值
+ 输出参数  : al_data_t *tbl  :取得的元素值
  返 回 值  : 
 
 *****************************************************************************/
-int32_t al_table_get_byidx(uint32_t idx, al_date_t *tbl)
+int32_t al_table_get_byidx(uint32_t idx, al_data_t *tbl)
 {
     uint32_t idx_t = idx;
     #if 1

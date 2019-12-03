@@ -13,12 +13,15 @@
 /*
  * Symbol Definition
  */
-typedef struct al_date_s
+typedef struct al_data_e
 {
-    //for user, you can modify it as yourself.
+    /* vvvv DON'T MODIFY vvvv */
     uint32_t id;
+    /* ^^^^ DON'T MODIFY ^^^^ */
+
+    //for user, you can modify it as yourself.
     int8_t name[20];
-}al_date_t;
+}al_data_t;
 
 typedef enum al_error_s
 {
@@ -60,43 +63,43 @@ extern int32_t al_table_init(void);
 /*****************************************************************************
  函 数 名  : al_table_add
  功能描述  : 往表中增加一个元素
- 输入参数  : al_date_t *tbl  :需要增加的元素
+ 输入参数  : al_data_t *tbl  :需要增加的元素
  输出参数  : 无
  返 回 值  : 
 
 *****************************************************************************/
-extern int32_t al_table_add(al_date_t *tbl);
+extern int32_t al_table_add(al_data_t *tbl);
 
 /*****************************************************************************
  函 数 名  : al_table_del
  功能描述  : 删除表中指定的元素
- 输入参数  : al_date_t *tbl  :需要删除的元素
+ 输入参数  : al_data_t *tbl  :需要删除的元素
  输出参数  : 无
  返 回 值  : 
 
 *****************************************************************************/
-extern int32_t al_table_del(al_date_t *tbl);
+extern int32_t al_table_del(al_data_t *tbl);
 
 /*****************************************************************************
  函 数 名  : al_table_modify
  功能描述  : 修改表中指定的元素
- 输入参数  : al_date_t *fr_tbl  :需要被修改的元素
-             al_date_t *to_tbl  :修改后的元素的值
+ 输入参数  : al_data_t *fr_tbl  :需要被修改的元素
+             al_data_t *to_tbl  :修改后的元素的值
  输出参数  : 无
  返 回 值  : 
 
 *****************************************************************************/
-extern int32_t al_table_modify(al_date_t *fr_tbl, al_date_t *to_tbl);
+extern int32_t al_table_modify(al_data_t *fr_tbl, al_data_t *to_tbl);
 
 /*****************************************************************************
  函 数 名  : al_table_get_byidx
  功能描述  : 通过索引取得表中的元素
  输入参数  : uint32_t idx      :元素索引
- 输出参数  : al_date_t *tbl  :取得的元素值
+ 输出参数  : al_data_t *tbl  :取得的元素值
  返 回 值  : 
 
 *****************************************************************************/
-extern int32_t al_table_get_byidx(uint32_t idx, al_date_t *tbl);
+extern int32_t al_table_get_byidx(uint32_t idx, al_data_t *tbl);
 
 /*****************************************************************************
  函 数 名  : al_table_get_num
