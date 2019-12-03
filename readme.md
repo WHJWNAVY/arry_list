@@ -1,5 +1,89 @@
 # array list api
 
+## DEBUG
+```bash
+AA------IDX: 0     ; ID: 0     ; NAME: XiaoMing
+AA------IDX: 1     ; ID: 1     ; NAME: XiaoMing
+AA------IDX: 2     ; ID: 2     ; NAME: XiaoMing
+AA------IDX: 3     ; ID: 3     ; NAME: XiaoMing
+AA------IDX: 4     ; ID: 4     ; NAME: XiaoMing
+AA------IDX: 5     ; ID: 5     ; NAME: XiaoMing
+AA------IDX: 6     ; ID: 6     ; NAME: XiaoMing
+AA------IDX: 7     ; ID: 7     ; NAME: XiaoMing
+AA------IDX: 8     ; ID: 8     ; NAME: XiaoMing
+AA------IDX: 9     ; ID: 9     ; NAME: XiaoMing
+AA------IDX: 10    ; ID: 10    ; NAME: XiaoMing
+AA------IDX: 11    ; ID: 11    ; NAME: XiaoMing
+AA------IDX: 12    ; ID: 12    ; NAME: XiaoMing
+AA------IDX: 13    ; ID: 13    ; NAME: XiaoMing
+AA------IDX: 14    ; ID: 14    ; NAME: XiaoMing
+AA------IDX: 15    ; ID: 15    ; NAME: XiaoMing
+AA------IDX: 16    ; ID: 16    ; NAME: XiaoMing
+AA------IDX: 17    ; ID: 17    ; NAME: XiaoMing
+AA------IDX: 18    ; ID: 18    ; NAME: XiaoMing
+AA------IDX: 19    ; ID: 19    ; NAME: XiaoMing
+AA------IDX: 20    ; ID: 20    ; NAME: XiaoMing
+AA------IDX: 21    ; ID: 21    ; NAME: XiaoMing
+AA------IDX: 22    ; ID: 22    ; NAME: XiaoMing
+AA------IDX: 23    ; ID: 23    ; NAME: XiaoMing
+AA------IDX: 24    ; ID: 24    ; NAME: XiaoMing
+AA------IDX: 25    ; ID: 25    ; NAME: XiaoMing
+AA------IDX: 26    ; ID: 26    ; NAME: XiaoMing
+AA------IDX: 27    ; ID: 27    ; NAME: XiaoMing
+AA------IDX: 28    ; ID: 28    ; NAME: XiaoMing
+AA------IDX: 29    ; ID: 29    ; NAME: XiaoMing
+AA------IDX: 30    ; ID: 30    ; NAME: XiaoMing
+AA------IDX: 31    ; ID: 31    ; NAME: XiaoMing
+AA------IDX: 32    ; ID: 32    ; NAME: XiaoMing
+AA------IDX: 33    ; ID: 33    ; NAME: XiaoMing
+AA------IDX: 34    ; ID: 34    ; NAME: XiaoMing
+AA------IDX: 35    ; ID: 35    ; NAME: XiaoMing
+AA------IDX: 36    ; ID: 36    ; NAME: XiaoMing
+AA------IDX: 37    ; ID: 37    ; NAME: XiaoMing
+AA------IDX: 38    ; ID: 38    ; NAME: XiaoMing
+AA------IDX: 39    ; ID: 39    ; NAME: XiaoMing
+AA------IDX: 40    ; ID: 40    ; NAME: XiaoMing
+AA------IDX: 41    ; ID: 41    ; NAME: XiaoMing
+AA------IDX: 42    ; ID: 42    ; NAME: XiaoMing
+AA------IDX: 43    ; ID: 43    ; NAME: XiaoMing
+AA------IDX: 44    ; ID: 44    ; NAME: XiaoMing
+AA------IDX: 45    ; ID: 45    ; NAME: XiaoMing
+AA------IDX: 46    ; ID: 46    ; NAME: XiaoMing
+AA------IDX: 47    ; ID: 47    ; NAME: XiaoMing
+AA------IDX: 48    ; ID: 48    ; NAME: XiaoMing
+AA------IDX: 49    ; ID: 49    ; NAME: XiaoMing
+--------------------------------------------------
+
+BB------IDX: 0     ; ID: 0     ; NAME: XiaoMing
+BB------IDX: 1     ; ID: 34    ; NAME: XiaoMing
+BB------IDX: 2     ; ID: 2     ; NAME: XiaoMing
+BB------IDX: 3     ; ID: 48    ; NAME: XiaoMing
+BB------IDX: 4     ; ID: 4     ; NAME: XiaoMing
+BB------IDX: 5     ; ID: 26    ; NAME: XiaoMing
+BB------IDX: 6     ; ID: 6     ; NAME: XiaoMing
+BB------IDX: 7     ; ID: 46    ; NAME: XiaoMing
+BB------IDX: 8     ; ID: 8     ; NAME: XiaoMing
+BB------IDX: 9     ; ID: 36    ; NAME: XiaoMing
+BB------IDX: 10    ; ID: 10    ; NAME: XiaoMing
+BB------IDX: 11    ; ID: 44    ; NAME: XiaoMing
+BB------IDX: 12    ; ID: 12    ; NAME: XiaoMing
+BB------IDX: 13    ; ID: 28    ; NAME: XiaoMing
+BB------IDX: 14    ; ID: 14    ; NAME: XiaoMing
+BB------IDX: 15    ; ID: 42    ; NAME: XiaoMing
+BB------IDX: 16    ; ID: 16    ; NAME: XiaoMing
+BB------IDX: 17    ; ID: 32    ; NAME: XiaoMing
+BB------IDX: 18    ; ID: 18    ; NAME: XiaoMing
+BB------IDX: 19    ; ID: 40    ; NAME: XiaoMing
+BB------IDX: 20    ; ID: 20    ; NAME: XiaoMing
+BB------IDX: 21    ; ID: 30    ; NAME: XiaoMing
+BB------IDX: 22    ; ID: 22    ; NAME: XiaoMing
+BB------IDX: 23    ; ID: 38    ; NAME: XiaoMing
+BB------IDX: 24    ; ID: 24    ; NAME: XiaoMing
+--------------------------------------------------
+```
+
+## API
+
 ```c
 #ifndef __ARRY_LIST_H_
 #define __ARRY_LIST_H_
